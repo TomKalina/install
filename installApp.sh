@@ -29,6 +29,10 @@ chsh -s /bin/zsh
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs build-essential
 
+sudo npm i -g yarn
+sudo npm i -g bobril-build     
+
+
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 #apm install linter language-babel highlight-selected atom-beautify autocomplete-paths todo-show color-picker linter-eslint editorconfig sort-lines Hyperclick js-hyperclick file-icons local-history

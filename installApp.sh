@@ -2,13 +2,15 @@
 #https://mega.nz/#sync
 #wget https://mega.nz/linux/MEGAsync/xUbuntu_16.10/amd64/nautilus-megasync-xUbuntu_16.10_amd64.deb
 
+. /etc/os-release
+echo "$VERSION_ID"
 
 sudo apt install -y gdebi
 cd /tmp/
-wget https://mega.nz/linux/MEGAsync/xUbuntu_17.10/amd64/megasync-xUbuntu_17.10_amd64.deb
-wget https://mega.nz/linux/MEGAsync/xUbuntu_17.10/amd64/nautilus-megasync-xUbuntu_17.10_amd64.deb
-sudo gdebi megasync-xUbuntu_17.10_amd64.deb
-sudo gdebi nautilus-megasync-xUbuntu_17.10_amd64.deb
+wget https://mega.nz/linux/MEGAsync/xUbuntu_"$VERSION_ID"/amd64/megasync-xUbuntu_"$VERSION_ID"_amd64.deb
+wget https://mega.nz/linux/MEGAsync/xUbuntu_"$VERSION_ID"/amd64/nautilus-megasync-xUbuntu_"$VERSION_ID"_amd64.deb
+sudo gdebi megasync-xUbuntu_"$VERSION_ID"_amd64.deb
+sudo gdebi nautilus-megasync-xUbuntu_"$VERSION_ID"_amd64.deb
 
 #sudo add-apt-repository ppa:webupd8team/gnome3 -y
 #sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell -y
@@ -18,10 +20,10 @@ sudo add-apt-repository ppa:webupd8team/java -y
 
 sudo apt update;
 
-sudo apt install -y zsh alacarte unrar-free p7zip-full p7zip-rar chromium-browser gnome-tweak-tool chrome-gnome-shell curl git gitk gimp mc terminator pidgin atom  keepass2 monodevelop mono-complete libmono-system-xml-linq4.0-cil libmono-system-data-datasetextensions4.0-cil libmono-system-runtime-serialization4.0-cil mono-mcs oracle-java8-installer libpangox-1.0-0
+sudo apt install -y zsh alacarte unrar-free p7zip-full p7zip-rar chromium-browser gnome-tweak-tool chrome-gnome-shell curl git gitk gimp mc terminator pidgin atom  keepass2 mono-complete libmono-system-xml-linq4.0-cil libmono-system-data-datasetextensions4.0-cil libmono-system-runtime-serialization4.0-cil mono-mcs oracle-java8-installer libpangox-1.0-0 htop
 
 #for system-monitor extension
-sudo apt-get install gir1.2-gtop-2.0 gir1.2-networkmanager-1.0  gir1.2-clutter-1.0
+sudo apt-get install -y gir1.2-gtop-2.0 gir1.2-networkmanager-1.0  gir1.2-clutter-1.0
 
 #set zsh to default
 chsh -s /bin/zsh 
@@ -30,16 +32,14 @@ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs build-essential
 
 sudo npm i -g yarn
-sudo npm i -g bobril-build     
-
 
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 #apm install linter language-babel highlight-selected atom-beautify autocomplete-paths todo-show color-picker linter-eslint editorconfig sort-lines Hyperclick js-hyperclick file-icons local-history
 
-cd /tmp/
-wget https://raw.github.com/pfn/keepasshttp/master/KeePassHttp.plgx
-sudo mv KeePassHttp.plgx /usr/lib/keepass2
+#cd /tmp/
+#wget https://raw.github.com/pfn/keepasshttp/master/KeePassHttp.plgx
+#sudo mv KeePassHttp.plgx /usr/lib/keepass2
 
 sudo sh -c 'echo "enabled=0" > /etc/default/apport'
 

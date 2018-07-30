@@ -7,6 +7,7 @@ echo "$VERSION_ID"
 
 sudo apt install -y gdebi
 cd /tmp/
+. /etc/os-release
 wget https://mega.nz/linux/MEGAsync/xUbuntu_"$VERSION_ID"/amd64/megasync-xUbuntu_"$VERSION_ID"_amd64.deb
 wget https://mega.nz/linux/MEGAsync/xUbuntu_"$VERSION_ID"/amd64/nautilus-megasync-xUbuntu_"$VERSION_ID"_amd64.deb
 sudo gdebi megasync-xUbuntu_"$VERSION_ID"_amd64.deb

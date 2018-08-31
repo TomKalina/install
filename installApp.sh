@@ -39,7 +39,7 @@ sudo sh -c 'echo "enabled=0" > /etc/default/apport'
 sudo cp /usr/share/X11/xkb/symbols/us /usr/share/X11/xkb/symbols/us-backup
 sudo gedit /usr/share/X11/xkb/symbols/us
 
-gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('xkb', 'se')]"
+gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('xkb', 'cz')]"
 
 git config --global user.email "info@tomaskalina.cz"
 git config --global user.name "Tomáš Kalina"

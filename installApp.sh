@@ -21,7 +21,7 @@ sudo gdebi nautilus-megasync-xUbuntu_"$VERSION_ID"_amd64.deb
 
 sudo apt update;
 
-sudo apt install -y zsh chromium-browser gnome-tweak-tool chrome-gnome-shell curl git gitk gimp mc terminator htop # oracle-java8-installer  
+sudo apt install -y usbmount zsh chromium-browser gnome-tweak-tool chrome-gnome-shell curl git gitk gimp mc terminator htop # oracle-java8-installer  
 
 #set zsh to default
 chsh -s /bin/zsh 

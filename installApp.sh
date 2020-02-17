@@ -25,8 +25,9 @@ sudo apt update;
 
 sudo apt install -y usbmount zsh chromium-browser gnome-tweak-tool chrome-gnome-shell curl git gitk gimp mc terminator htop # oracle-java8-installer  
 
+cp .zshrc ~/
 #set zsh to default
-chsh -s /bin/zsh 
+chsh -s /bin/zsh
 
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get install -y nodejs build-essential

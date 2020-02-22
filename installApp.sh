@@ -21,6 +21,8 @@ sudo gdebi nautilus-megasync-xUbuntu_"$VERSION_ID"_amd64.deb
 #sudo add-apt-repository ppa:webupd8team/java -y
 #sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886
 
+mkdir ~/.cache/vlc
+
 sudo apt update;
 
 sudo apt install -y usbmount zsh chromium-browser gnome-tweak-tool chrome-gnome-shell curl git gitk gimp mc terminator htop # oracle-java8-installer  

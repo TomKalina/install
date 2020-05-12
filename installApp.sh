@@ -21,12 +21,15 @@ sudo gdebi nautilus-megasync-xUbuntu_"$VERSION_ID"_amd64.deb
 #sudo add-apt-repository ppa:webupd8team/java -y
 #sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886
 
+mkdir ~/.cache/vlc
+
 sudo apt update;
 
 sudo apt install -y usbmount zsh chromium-browser gnome-tweak-tool chrome-gnome-shell curl git gitk gimp mc terminator htop # oracle-java8-installer  
 
+cp .zshrc ~/
 #set zsh to default
-chsh -s /bin/zsh 
+chsh -s /bin/zsh
 
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get install -y nodejs build-essential
@@ -62,3 +65,8 @@ sudo gedit /usr/share/X11/xkb/symbols/us
 #install UAF lib
 sudo cp ./libssl.so.1.0.0  /usr/lib
 sudo cp ./libcrypto.so.1.0.0  /usr/lib
+
+gsettings set org.gnome.shell.extensions.dash-to-dock autohide false
+gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
+gsettings set org.gnome.shell.extensions.dash-to-dock intellihide false
+

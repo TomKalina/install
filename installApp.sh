@@ -59,3 +59,6 @@ git config --global user.name "Tomáš Kalina"
 sudo cp /usr/share/X11/xkb/symbols/us /usr/share/X11/xkb/symbols/us-backup
 sudo gedit /usr/share/X11/xkb/symbols/us
 
+#install UAF lib
+sudo cp ./libssl.so.1.0.0  /usr/lib
+sudo cp ./libcrypto.so.1.0.0  /usr/lib

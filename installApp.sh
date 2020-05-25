@@ -27,19 +27,12 @@ sudo apt update;
 
 sudo apt install -y usbmount zsh chromium-browser gnome-tweak-tool chrome-gnome-shell curl git gitk gimp mc terminator htop # oracle-java8-installer  
 
-cp .zshrc ~/
-#set zsh to default
-chsh -s /bin/zsh
-
-curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt-get install -y nodejs build-essential
 
 sudo npm i -g yarn
 
-sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-
 sudo sh -c 'echo "enabled=0" > /etc/default/apport'
-
 
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('xkb', 'cz')]"
 
@@ -48,15 +41,13 @@ wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.ot
 wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
 mkdir ~/.fonts/
 mv PowerlineSymbols.otf ~/.fonts/
-mkdir -p .config/fontconfig/conf.d #if directory doesn't exists
+mkdir -p ~/.config/fontconfig/conf.d #if directory doesn't exists
 
 fc-cache -vf ~/.fonts/
 mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 
-
 git config --global user.email "info@tomaskalina.cz"
 git config --global user.name "Tomáš Kalina"
-
 
 #change keyboard
 sudo cp /usr/share/X11/xkb/symbols/us /usr/share/X11/xkb/symbols/us-backup
@@ -70,3 +61,5 @@ gsettings set org.gnome.shell.extensions.dash-to-dock autohide false
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
 gsettings set org.gnome.shell.extensions.dash-to-dock intellihide false
 
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+cp .zshrc ~/

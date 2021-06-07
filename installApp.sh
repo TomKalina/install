@@ -48,6 +48,7 @@ mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/chrisands/zsh-yarn-completions ~/.oh-my-zsh/custom/plugins/zsh-yarn-completions
 cp ./.zshrc ~/.zshrc 
+chsh -s $(which zsh)
 
 #other
 sudo apt update;
